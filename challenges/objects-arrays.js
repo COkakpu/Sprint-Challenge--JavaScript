@@ -93,13 +93,15 @@ const contactInfo = graduates.map(function(element){
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
-const unisWithUni = grduates.filter(function(element){
-  if(element.university === ' University') {
-    return element;
+const unisWithUni = []; 
+graduates.forEach(function (arrayItem, arrayIndex, array) {
+  if (arrayItem.university.match(/uni/gi)) {
+    unisWithUni.push(arrayItem);
   }
-  
 });
-console.log(unisWithUni);
+console.log(unisWithUni)
+
+
 
 
 // ==== ADVANCED Array Methods ====
@@ -125,11 +127,12 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 
-const displayNames = zooAnimals.forEach(function (element) {
-  console.log(
-    "name: " +
+const displayNames = [] 
+zooAnimals.forEach(function (element) {
+  displayNames.push(
+    "Name: " +
       element.animal_name +
-      " scientific: " +
+      " Scientific: " +
       element.scientific_name
   );
 });
