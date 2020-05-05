@@ -22,7 +22,7 @@ function multiply(num1, num2){
   return num1 * num2;
 }
 function greeting (firstName, lastName){
-  return 'Hello '+ firstName + ' ' +lastName; " , nice to meet you!"
+  return 'Hello '+ firstName + ' ' + lastName + ", nice to meet you!"
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
